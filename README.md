@@ -28,13 +28,6 @@ Todo el contenido es aportado por estudiantes, para estudiantes.
 - ├── 9no/
 - └── 10mo/
 
-Dentro de cada carpeta encontrarás subcarpetas como:
-- `/apuntes`
-- `/tareas`
-- `/examenes`
-- `/proyectos`
-- `/otros`
-
 ---
 
 ## 🙌 Cómo contribuir
