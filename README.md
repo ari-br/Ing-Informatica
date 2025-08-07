@@ -11,7 +11,7 @@ Todo el contenido es aportado por estudiantes, para estudiantes.
 ## 🔗 Formularios
 
 - 📤 **Sube material académico**:  
-  [👉 Formulario para enviar material]([https://docs.google.com/forms/d/FORMULARIO_SUBIDA](https://forms.gle/wdWbTZs6XrR2zmDz6))
+  [👉 Formulario para enviar material](https://forms.gle/wdWbTZs6XrR2zmDz6)
 
 - 🗣️ **Opina sobre cursos y profesores**:  
   [👉 Formulario de opiniones](https://forms.gle/gaWnw48gSrTHaGGDA)
