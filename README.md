@@ -20,13 +20,13 @@ Todo el contenido es aportado por estudiantes, para estudiantes.
 
 ## 🗂️ Estructura del repositorio
 - Ing-Informatica/
-- ├── 5to/
-- │   └── nombre-del-curso/
-- ├── 6to/
-- ├── 7mo/
-- ├── 8vo/
-- ├── 9no/
-- └── 10mo/
+- ├── 5° CICLO/
+- │   └── NOMBRE DEL CURSO/
+- ├── 6° CICLO/
+- ├── 7° CICLO/
+- ├── 8° CICLO/
+- ├── 9° CICLO/
+- └── 10° CICLO/
 
 ---
 
