@@ -1,7 +1,7 @@
 # Repositorio de Material Académico – Ingeniería Informática
 
 Bienvenid@ al repositorio colaborativo de material académico de Ingeniería Informática.  
-Este espacio está pensado para **compartir apuntes, exámenes, prácticas, laboratorios y otros recursos útiles** de los cursos comprendidos entre el 5° y 10° ciclo de la carrera.
+Este espacio está pensado para **compartir material de clase, apuntes, exámenes, prácticas, laboratorios y otros recursos útiles** de los cursos comprendidos entre el 5° y 10° ciclo de la carrera.
 
 Todo el contenido es aportado por estudiantes, para estudiantes.  
 ¡Gracias por contribuir y hacer crecer este recurso!
@@ -20,20 +20,13 @@ Todo el contenido es aportado por estudiantes, para estudiantes.
 
 ## 🗂️ Estructura del repositorio
 - Ing-Informatica/
-- ├── 5to/
-- │   └── nombre-del-curso/
-- ├── 6to/
-- ├── 7mo/
-- ├── 8vo/
-- ├── 9no/
-- └── 10mo/
-
-Dentro de cada carpeta encontrarás subcarpetas como:
-- `/apuntes`
-- `/tareas`
-- `/examenes`
-- `/proyectos`
-- `/otros`
+- ├── 5° CICLO/
+- │   └── NOMBRE DEL CURSO/
+- ├── 6° CICLO/
+- ├── 7° CICLO/
+- ├── 8° CICLO/
+- ├── 9° CICLO/
+- └── 10° CICLO/
 
 ---
 
