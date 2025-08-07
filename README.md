@@ -11,17 +11,17 @@ Todo el contenido es aportado por estudiantes, para estudiantes.
 ## 🔗 Formularios
 
 - 📤 **Sube material académico**:  
-  [👉 Formulario para enviar material](https://docs.google.com/forms/d/FORMULARIO_SUBIDA)
+  [👉 Formulario para enviar material]([https://docs.google.com/forms/d/FORMULARIO_SUBIDA](https://forms.gle/wdWbTZs6XrR2zmDz6))
 
 - 🗣️ **Opina sobre cursos y profesores**:  
-  [👉 Formulario de opiniones](https://docs.google.com/forms/d/FORMULARIO_OPINIONES)
+  [👉 Formulario de opiniones](https://forms.gle/gaWnw48gSrTHaGGDA)
 
 ---
 
 ## 🗂️ Estructura del repositorio
-material-ingenieria-informatica/
+Ing-Informatica/
 ├── 5to/
-│ └── nombre-del-curso/
+│   └── nombre-del-curso/
 ├── 6to/
 ├── 7mo/
 ├── 8vo/
