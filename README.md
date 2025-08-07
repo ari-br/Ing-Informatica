@@ -19,14 +19,14 @@ Todo el contenido es aportado por estudiantes, para estudiantes.
 ---
 
 ## 🗂️ Estructura del repositorio
-Ing-Informatica/
-├── 5to/
-│   └── nombre-del-curso/
-├── 6to/
-├── 7mo/
-├── 8vo/
-├── 9no/
-└── 10mo/
+- Ing-Informatica/
+- ├── 5to/
+- │   └── nombre-del-curso/
+- ├── 6to/
+- ├── 7mo/
+- ├── 8vo/
+- ├── 9no/
+- └── 10mo/
 
 Dentro de cada carpeta encontrarás subcarpetas como:
 - `/apuntes`
