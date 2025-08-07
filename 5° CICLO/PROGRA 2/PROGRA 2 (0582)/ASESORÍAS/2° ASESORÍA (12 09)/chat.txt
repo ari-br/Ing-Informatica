@@ -1,0 +1,361 @@
+18:46:18	 From ARIEL JAIR LLAIQUI ROJAS : Buenas tardes profesor
+18:46:28	 From Rony Cueva : Hola a todos
+18:46:32	 From MAYERLI DINA LOPEZ CARHUAPUMA : holi
+18:46:43	 From MAYERLI DINA LOPEZ CARHUAPUMA : tengo miedo profe
+18:46:44	 From DANIEL ARTURO CASTILLO RIOS : Profe cuánto bajaban sí no llegaba a hacer la función de recorte?
+18:46:53	 From JORGE JOSUE CHAMORRO CAYETANO : Profe, estructuras dinamicas ?
+18:46:59	 From WALTER JUNIOR NAVARRO COLLAO : Tengo mieo de melgar
+18:47:01	 From DANIEL ARTURO CASTILLO RIOS : :0 ,  vale , gracias
+18:47:08	 From WALTER JUNIOR NAVARRO COLLAO : Melgar viene por nosotros ayuda
+18:47:53	 From WALTER JUNIOR NAVARRO COLLAO : Que? Como que viene sobrecargas tmb?
+18:48:07	 From EISEN JACK MATEO MENDOZA : Tmb viene sobrecarga de nuevo profe?
+18:48:15	 From JORGE JOSUE CHAMORRO CAYETANO : Usaremos el codigo de como se hizo la sobrecarga o vamos a crear un sobrecargas.cpp?
+18:49:25	 From Gimena Anyeline Tenipuclla F : profesor si leo un codigo o dni (cadena exacta) puedo usar un arreglo estatico para leerlo? o debe ser todo dinamico?
+18:50:07	 From ARIANA BURGA RISCO : chicos, traten de escribir sus preguntas para todos por favor
+18:50:17	 From DARWIN GERARD CACERES ENDO : las 20 líneas cuentan por cada función hecha? o si creo una subfunción que lee adentro tmb cuenta en esas 20 líneas?
+18:50:38	 From WALTER JUNIOR NAVARRO COLLAO : Profe cuantos archivos ?
+18:52:36	 From DARWIN GERARD CACERES ENDO : tripleta?
+18:52:38	 From Jefferson RC : char ***
+18:52:49	 From Johar Ricarte Cubas Castro : int***7
+18:52:49	 From WALTER JUNIOR NAVARRO COLLAO : Int ***
+18:53:12	 From EISEN JACK MATEO MENDOZA : Repaso violento profe
+18:54:03	 From Jefferson RC : int ***
+18:54:04	 From DANIEL ARTURO CASTILLO RIOS : int ***
+18:54:12	 From EISEN JACK MATEO MENDOZA : Int ***
+18:54:32	 From Jefferson RC : el ejercicio de canarios profe en PD
+18:55:39	 From WALTER JUNIOR NAVARRO COLLAO : Chi
+18:56:01	 From WALTER JUNIOR NAVARRO COLLAO : Struct
+18:56:20	 From EISEN JACK MATEO MENDOZA : Struct repartidor ***
+18:56:35	 From EISEN JACK MATEO MENDOZA : +2 en lab
+18:56:59	 From JORGE JOSUE CHAMORRO CAYETANO : Ordenes
+18:57:01	 From EISEN JACK MATEO MENDOZA : Orden de pedido
+18:57:02	 From WALTER JUNIOR NAVARRO COLLAO : Monto a cobrar diatancia
+18:57:06	 From EISEN JACK MATEO MENDOZA : Y cada orden platos
+18:57:11	 From EISEN JACK MATEO MENDOZA : Y cada plato pedidos
+18:57:21	 From LUIS ALBERTO MIRANDA MALLQUI : ☠️
+18:57:28	 From SEBASTIAN STEPHANO GODOY SORIA : 😭
+18:57:34	 From WALTER JUNIOR NAVARRO COLLAO : Xhi
+18:57:36	 From DARWIN GERARD CACERES ENDO : ☠️
+18:57:39	 From JORGE JOSUE CHAMORRO CAYETANO : q es eso?
+18:57:40	 From JUAN DIEGO ZAVALA VISCARDO : 😭
+18:57:47	 From LUIS ALBERTO MIRANDA MALLQUI : gg
+18:57:50	 From KEVIN DANIEL ALCCA CHAVEZ : ese lab lo eliminé
+18:57:59	 From EISEN JACK MATEO MENDOZA : 🐧
+18:58:00	 From JUAN DIEGO ZAVALA VISCARDO : Replying to "ese lab lo eliminé"
+
+x2
+18:58:05	 From LUIS ALBERTO MIRANDA MALLQUI : ya fue profe full cromosoma nomas
+18:58:21	 From WALTER JUNIOR NAVARRO COLLAO : Pinta triangulo noma sprofe
+18:58:35	 From JUAN DIEGO ZAVALA VISCARDO : llegó Melgar y chasqueó los dedos :¨v
+18:58:58	 From Jefferson RC : profesor el struct nos darán en el lab ?
+18:58:59	 From EISEN JACK MATEO MENDOZA : Profe la definición sería;  un struct Repartidor ***repartidor
+18:58:59	 From LUIS ALBERTO MIRANDA MALLQUI : Gracias porfe
+18:59:04	 From DARWIN GERARD CACERES ENDO : un struct que tengan dentro a los 2 punteros?
+18:59:11	 From EISEN JACK MATEO MENDOZA : Y para el ** lo manejamos en un arreglo y sus índices?
+18:59:27	 From EISEN JACK MATEO MENDOZA : Apertura de archivos tmb profe?
+18:59:37	 From DARWIN GERARD CACERES ENDO : osea pa trasportar como struct en vez de pasar cada arreglo dinámica?
+18:59:50	 From ALESSANDRO ALCANTARA TORRES : Melgar creativo :c
+18:59:50	 From WALTER JUNIOR NAVARRO COLLAO : Todo en .a?
+19:00:04	 From DARWIN GERARD CACERES ENDO : pipipipi
+19:00:14	 From Joel Galindo : 😣
+19:00:26	 From EISEN JACK MATEO MENDOZA : La memoria dinámica lo haríamos solo en el caso del *char? O para cada tipo profe?
+19:01:20	 From JOHN MANUEL ARZAPALO ARANA : si profe
+19:02:41	 From LUIS ALBERTO MIRANDA MALLQUI : XD
+19:02:54	 From Jefferson RC : :')
+19:03:03	 From JORGE JOSUE CHAMORRO CAYETANO : Nos van a matar
+19:03:11	 From EISEN JACK MATEO MENDOZA : Terrible baje de pepa del profe Melgar
+19:03:19	 From MIGUEL ANGEL TORRES VILLANUEVA : ten piedad, Melgar
+19:03:23	 From DARWIN GERARD CACERES ENDO : es lab o examen :c
+19:03:40	 From EISEN JACK MATEO MENDOZA : Nivel funpro profe?
+19:03:42	 From Jefferson RC : profe una pregunta puede repetir lo del struct por favor :c
+19:04:04	 From ROBERTO ABEL CHAVEZ JAVIER : profe, seria ***struct o *** en struct?
+19:04:40	 From DARWIN GERARD CACERES ENDO : será un .a o será un pdf las funciones xd
+19:05:09	 From EISEN JACK MATEO MENDOZA : Si podemos hacer las reducciones de punteros con cada función no profe?
+19:05:22	 From JORGE JOSUE CHAMORRO CAYETANO : Plato=new struct Plato[100];
+19:05:29	 From MIGUEL ANGEL TORRES VILLANUEVA : misericordia
+19:05:40	 From JOHN MANUEL ARZAPALO ARANA : profe mñn igual vamos a tener que usar la version de NetBeans que se demora en compilar?
+19:06:21	 From LUIS ALBERTO MIRANDA MALLQUI : las antifijas ahora profe
+19:07:36	 From Jefferson RC : :')
+19:08:11	 From EISEN JACK MATEO MENDOZA : Profesor el ordenamiento del ciclo pasado lo pedían al ingresar datos, ahora tendremos que ordenar así o invocamos, si es que hay una función ordenar?
+19:08:26	 From JORGE JOSUE CHAMORRO CAYETANO : Replying to "Profesor el ordenami..."
+
+insertar ordenado?
+19:09:09	 From JORGE JOSUE CHAMORRO CAYETANO : las antifijas :C ?
+19:09:17	 From Jefferson RC : profe entonces es un struct * ?
+19:09:39	 From LUIS ALBERTO MIRANDA MALLQUI : o sea que lab 3 será masacre?
+19:09:41	 From ALESSANDRO ALCANTARA TORRES : 💀
+19:09:44	 From EISEN JACK MATEO MENDOZA : Le hago mi repasito a ***bufferPlato, profe?
+19:10:05	 From LUIS ALBERTO MIRANDA MALLQUI : noo profe
+19:10:15	 From MIGUEL ANGEL TORRES VILLANUEVA : profe, haga el lab de mnn xd
+19:10:26	 From Jefferson RC : profe lo del struct será un struct * ? :,c
+19:10:39	 From LUIS ALBERTO MIRANDA MALLQUI : Amen
+19:10:40	 From EISEN JACK MATEO MENDOZA : Solo un puntero?
+19:10:45	 From Pedro Ch?vez : De cuantos niveles?
+19:10:51	 From LUIS ALBERTO MIRANDA MALLQUI : Replying to "Solo un puntero?"
+
+solo??
+19:11:07	 From EISEN JACK MATEO MENDOZA : Struct pulpo
+19:11:14	 From LUIS ALBERTO MIRANDA MALLQUI : dron submarino
+19:11:46	 From Jefferson RC : gracias profe :,)
+19:11:53	 From JORGE JOSUE CHAMORRO CAYETANO : Profe, las funciones que nos van a dar el enunciado va a decir como usarlas?
+19:12:09	 From Jefferson RC : profe una pregunta es valido colocar {} para inicializar el char con nullptr o debo inicializarlo ?
+19:13:39	 From JORGE JOSUE CHAMORRO CAYETANO : No comenten en privado :C
+19:13:46	 From Jefferson RC : gracias profe :')
+19:13:49	 From MIGUEL ANGEL TORRES VILLANUEVA : pa todos
+19:14:10	 From WALTER JUNIOR NAVARRO COLLAO : XD
+19:14:12	 From DANIEL ARTURO CASTILLO RIOS : jajajaa
+19:14:14	 From EISEN JACK MATEO MENDOZA : Struct *dato
+Dato = new struct [strlen()]?
+19:14:15	 From JORGE JOSUE CHAMORRO CAYETANO : xD the goat
+19:14:15	 From JUAN DIEGO ZAVALA VISCARDO : JKAJKAJKAKJAJK
+19:14:17	 From Pedro Ch?vez : BOTALO
+19:14:17	 From JUAN DIEGO ZAVALA VISCARDO : la dele
+19:14:18	 From Jefferson RC : botafogo
+19:14:19	 From JOHN MANUEL ARZAPALO ARANA : XDDDDDDDDDD
+19:14:24	 From ARIANA BURGA RISCO : CÓMO Q LA DELE
+19:14:24	 From MIGUEL ANGEL TORRES VILLANUEVA : BAN
+19:14:24	 From EISEN JACK MATEO MENDOZA : Guanira infiltrado
+19:14:28	 From Jefferson RC : botafogo profe xd
+19:14:41	 From JORGE JOSUE CHAMORRO CAYETANO : Perdoname por todo, profe Guanira!
+19:15:55	 From DARWIN GERARD CACERES ENDO : tiene la misma estructura que labs pasados o es innovación?
+19:16:08	 From Pedro Ch?vez : Uy
+19:16:09	 From EISEN JACK MATEO MENDOZA : Struct *dato
+Dato = new struct [strlen()]?
+19:16:15	 From WALTER JUNIOR NAVARRO COLLAO : 💀
+19:16:28	 From JUAN DIEGO ZAVALA VISCARDO : Replying to "Struct *dato
+Dato = ..."
+
+de vuelta a TP
+19:16:32	 From LUIS ALBERTO MIRANDA MALLQUI : Replying to "Struct *dato
+Dato = ..."
+
+x2
+19:16:32	 From SEBASTIAN STEPHANO GODOY SORIA : Replying to "Struct *dato
+Dato = ..."
+
+será cant
+Dato = …" with 😭
+19:16:37	 From WALTER JUNIOR NAVARRO COLLAO : De 1
+19:16:39	 From JORGE JOSUE CHAMORRO CAYETANO : Replying to "Struct *dato
+Dato = ..."
+
+pipipi
+19:16:40	 From JUAN DIEGO ZAVALA VISCARDO : Replying to "Struct *dato
+Dato = ..."
+
+castigado
+19:16:41	 From KEVIN DANIEL ALCCA CHAVEZ : Replying to "Struct *dato
+Dato = ..."
+
+Terrible error de concepto
+19:16:43	 From Rony Cueva : TP por siempre
+19:16:45	 From EISEN JACK MATEO MENDOZA : Devuelvan a ese kchimbo
+Dato = ..." with 😭
+19:16:45	 From JORGE JOSUE CHAMORRO CAYETANO : profe, vamos  a usar el mismo Estructura.h pero con *s?
+19:16:46	 From LUIS ALBERTO MIRANDA MALLQUI : XD
+19:17:38	 From Pedro Ch?vez : Pero para todos pe
+19:17:56	 From Medrano Amaro Gabriel : Estudiante* estudiantes = new Estudiante[n];
+19:18:03	 From Rony Cueva : Char***Carta
+19:18:26	 From Rony Cueva : Carta = new char**[strlen()]???????????????????????
+19:18:31	 From Medrano Amaro Gabriel : no
+19:18:32	 From WALTER JUNIOR NAVARRO COLLAO : ??????
+19:18:33	 From LUIS ALBERTO MIRANDA MALLQUI : xdd
+19:18:38	 From WALTER JUNIOR NAVARRO COLLAO : TEC
+19:18:38	 From JORGE JOSUE CHAMORRO CAYETANO : TEC
+19:18:41	 From Pedro Ch?vez : TEC
+19:18:43	 From Medrano Amaro Gabriel : TEC
+19:18:45	 From JUAN DIEGO ZAVALA VISCARDO : TEC
+19:18:50	 From Jefferson RC : T.E.C.
+19:18:52	 From EISEN JACK MATEO MENDOZA : Profe no me queme
+19:18:53	 From EISEN JACK MATEO MENDOZA : Xddd
+19:18:59	 From MIGUEL ANGEL TORRES VILLANUEVA : pa todos
+19:19:14	 From MAYERLI DINA LOPEZ CARHUAPUMA : soy timida u.u
+19:19:17	 From Medrano Amaro Gabriel : struct Estudiante* estudiantes = new Estudiante[n]; para los guaniralovers
+19:19:26	 From Rony Cueva : Carta = new Plato [100]
+19:19:39	 From JORGE JOSUE CHAMORRO CAYETANO : ya me dio hambre, profe
+19:19:43	 From Jefferson RC : typedef god profe
+19:20:07	 From Pedro Ch?vez : Resuelva el lab de manana como tip
+19:20:17	 From JORGE JOSUE CHAMORRO CAYETANO : Replying to "typedef god profe"
+
+q es eso?
+19:20:28	 From ROBERTO ABEL CHAVEZ JAVIER : si es ***, no seria new **Plato, profe?
+19:20:47	 From LUIS ALBERTO MIRANDA MALLQUI : profe cuales son sus predicciones para mañana
+19:21:17	 From Pedro Ch?vez : Profe, el ejemplito para practicar
+19:21:20	 From EISEN JACK MATEO MENDOZA : Por ser struct aunque sea *** carta no se define como new struct **[100]?
+19:21:38	 From JORGE JOSUE CHAMORRO CAYETANO : terrible lo que va a pasar mñn
+19:21:39	 From JUAN DIEGO ZAVALA VISCARDO : Replying to "Por ser struct aunqu..."
+
+para Funpro
+19:21:47	 From Rony Cueva : Replying to "Por ser struct aunqu..."
+
+😂
+19:21:49	 From JOHN MANUEL ARZAPALO ARANA : ahora tip para algoritmia 🥺
+19:21:50	 From Pedro Ch?vez : Manana tramito mi retiro
+19:21:59	 From MIGUEL ANGEL TORRES VILLANUEVA : robot sonda?
+19:22:01	 From JUAN DIEGO ZAVALA VISCARDO : JAJAJJAJAJA
+19:22:04	 From WALTER JUNIOR NAVARRO COLLAO : No chambea
+19:22:09	 From MIGUEL ANGEL TORRES VILLANUEVA : predecesores
+19:22:13	 From JUAN DIEGO ZAVALA VISCARDO : se pasa a la segunda con Roncal
+19:22:21	 From Pedro Ch?vez : EL delegado no hace nada
+19:22:23	 From MAYERLI DINA LOPEZ CARHUAPUMA : veeee
+19:22:26	 From LUIS ALBERTO MIRANDA MALLQUI : profe que lab esta mas jalable algo o progra?
+19:22:37	 From JUAN DIEGO ZAVALA VISCARDO : qué
+19:22:38	 From MIGUEL ANGEL TORRES VILLANUEVA : kheee
+19:22:38	 From Pedro Ch?vez : no p
+19:22:38	 From WALTER JUNIOR NAVARRO COLLAO : No me diga eso
+19:22:39	 From LUIS ALBERTO MIRANDA MALLQUI : so
+19:22:39	 From JUAN DIEGO ZAVALA VISCARDO : :´v
+19:22:40	 From MAYERLI DINA LOPEZ CARHUAPUMA : no profe
+19:22:40	 From EISEN JACK MATEO MENDOZA : No me diga eso profe
+19:22:42	 From JOHN MANUEL ARZAPALO ARANA : :((
+19:22:44	 From ROBERTO ABEL CHAVEZ JAVIER : 💀
+19:22:47	 From JUAN DIEGO ZAVALA VISCARDO : no profe :,v
+19:22:50	 From JORGE JOSUE CHAMORRO CAYETANO : Un salto de fe
+19:22:50	 From LUIS ALBERTO MIRANDA MALLQUI : Tips para algoritmia porfe
+19:22:53	 From LUIS ALBERTO MIRANDA MALLQUI : sigo con el panda
+19:22:56	 From LUIS ALBERTO MIRANDA MALLQUI : desde la semana 1
+19:22:56	 From LUIS ALBERTO MIRANDA MALLQUI : f
+19:22:59	 From Medrano Amaro Gabriel : :¨c
+19:23:01	 From Jefferson RC : profe algoritmia era chévere cuando estaba backtracking y pd
+19:23:02	 From MAYERLI DINA LOPEZ CARHUAPUMA : profe un abuso tener labs seguidos
+19:23:04	 From Pedro Ch?vez : Profe que es fuerza bruta
+19:23:06	 From Pedro Ch?vez : XD
+19:23:15	 From JUAN DIEGO ZAVALA VISCARDO : Replying to "profe un abuso tener..."
+
+reventar de correos al director de carrera
+19:23:17	 From JUAN DIEGO ZAVALA VISCARDO : Replying to "profe un abuso tener..."
+
+revuelta
+19:23:21	 From MAYERLI DINA LOPEZ CARHUAPUMA : con quien me quejo profe? u.u
+19:23:21	 From DARWIN GERARD CACERES ENDO : profe, yo tendré que crear una estructura? o no se creará nada de eso y nos lo darán?
+19:23:23	 From JORGE JOSUE CHAMORRO CAYETANO : Profe va a haber arreglos en paralelo, verdad?
+19:23:33	 From MIGUEL ANGEL TORRES VILLANUEVA : con CLion
+19:23:55	 From EISEN JACK MATEO MENDOZA : Agregaremos terminator o será la lectura en orden, con sus índices para cada arreglo
+19:24:03	 From ARIANA BURGA RISCO : MANDEN SUS PREGUNTAS PARA TODOS, para subir el chat después
+19:24:28	 From EISEN JACK MATEO MENDOZA : Para el caso de dni, un 0
+19:24:31	 From DANIEL ARTURO CASTILLO RIOS : uno de sus campos
+19:24:33	 From DANIEL ARTURO CASTILLO RIOS : tenia 0
+19:25:10	 From ALESSANDRO ALCANTARA TORRES : 😢
+19:25:12	 From EISEN JACK MATEO MENDOZA : En la encuesta se verá reflejada
+19:25:14	 From Rony Cueva : Lean bien la pregunta
+19:25:21	 From Rony Cueva : lean bien la pregunta
+19:25:24	 From DARWIN GERARD CACERES ENDO : profe, que había mencionado de sobrecargas? :Ccc
+19:25:27	 From Pedro Ch?vez : Profe pase la pregunta para ir leyendola pero bien
+19:25:28	 From MIGUEL ANGEL TORRES VILLANUEVA : hay prueba de salida pa levantar? xd
+19:25:29	 From Rony Cueva : lean bien la pregunta
+19:25:56	 From Jefferson RC : JAJAJAJA
+19:26:00	 From DANIEL ARTURO CASTILLO RIOS : XD
+19:26:00	 From EISEN JACK MATEO MENDOZA : Un forms de teoría profe
+19:26:04	 From EISEN JACK MATEO MENDOZA : Que valga 2 puntos
+19:26:07	 From DARWIN GERARD CACERES ENDO : xd
+19:26:12	 From JUAN DIEGO ZAVALA VISCARDO : Replying to "Que valga 2 puntos "
+
+empiezo con -2 el labo
+19:26:28	 From Pedro Ch?vez : poner nombre +1 punto
+19:26:58	 From JORGE JOSUE CHAMORRO CAYETANO : Profe, vamos a crear sobrecargas?
+19:27:25	 From Rony Cueva : !
+19:27:29	 From EISEN JACK MATEO MENDOZA : Hay parte 1 y 2 como el lab pasado profe?
+19:27:31	 From JORGE JOSUE CHAMORRO CAYETANO : Dijo su frase, profe 0:
+19:27:42	 From MIGUEL ANGEL TORRES VILLANUEVA : profe, son mas de 300 lineas xd?
+19:27:45	 From EISEN JACK MATEO MENDOZA : Ya perdí
+19:27:46	 From MAYERLI DINA LOPEZ CARHUAPUMA : Replying to "!"
+
+la fija?
+19:27:51	 From Rony Cueva : Ya perdí
+19:27:52	 From JUAN DIEGO ZAVALA VISCARDO : Replying to "!"
+
+la fija
+19:28:00	 From Nelson Alvarez : Replying to "!"
+
+🔴
+19:28:07	 From Jefferson RC : muchas gracias profe c':
+19:28:19	 From JORGE JOSUE CHAMORRO CAYETANO : La bendición plis :D
+19:28:43	 From Pedro Ch?vez : Promedio negativo
+19:29:19	 From EISEN JACK MATEO MENDOZA : Podría venir maso como lo que pedían en las sobrecargas, pero sin usar esos operadores? Tipo ese triple for de búsqueda y validación
+19:29:31	 From ARIANA BURGA RISCO : qué horario?
+19:29:44	 From EISEN JACK MATEO MENDOZA : Esos son cartas profe
+19:29:57	 From JORGE JOSUE CHAMORRO CAYETANO : ;D
+19:29:58	 From JUAN DIEGO ZAVALA VISCARDO : Replying to "Esos son cartas prof..."
+
+n ote burles, eres el siguiente
+19:30:23	 From EISEN JACK MATEO MENDOZA : Jerarquía
+19:30:48	 From Pedro Ch?vez : Me baja la moral
+19:31:05	 From JORGE JOSUE CHAMORRO CAYETANO : Melgar esta en su prime
+19:31:23	 From EISEN JACK MATEO MENDOZA : Ponen puro 0 ps profe
+19:31:24	 From Miguel Luyo Daga : 💀
+19:31:28	 From EISEN JACK MATEO MENDOZA : Así avanzan rápido
+19:31:44	 From MAYERLI DINA LOPEZ CARHUAPUMA : XDD
+19:31:45	 From SEBASTIAN STEPHANO GODOY SORIA : xd
+19:31:46	 From KEVIN DANIEL ALCCA CHAVEZ : xd
+19:31:48	 From LUIS ALBERTO MIRANDA MALLQUI : XD
+19:31:49	 From JUAN DIEGO ZAVALA VISCARDO : XDD @EISEN JACK MATEO MENDOZA
+19:32:08	 From LUIS ALBERTO MIRANDA MALLQUI : curva profe
+19:32:13	 From MIGUEL ANGEL TORRES VILLANUEVA : las jijas
+19:32:14	 From JORGE JOSUE CHAMORRO CAYETANO : profe, las antifijas :C
+19:32:39	 From EISEN JACK MATEO MENDOZA : Curva para el parcial profe
+19:32:41	 From JUAN DIEGO ZAVALA VISCARDO : Caímos
+19:32:48	 From JUAN DIEGO ZAVALA VISCARDO : Volveremos más fuertes
+19:32:55	 From JOHN MANUEL ARZAPALO ARANA : profe pero si las cosas van feas puede haber curva?
+19:33:00	 From JORGE JOSUE CHAMORRO CAYETANO : @JUAN DIEGO ZAVALA VISCARDO tu horario esta en decadencia :C
+19:33:00	 From EISEN JACK MATEO MENDOZA : Le bajaré la media profe, no se preocupe
+19:33:16	 From JUAN DIEGO ZAVALA VISCARDO : Replying to "@JUAN DIEGO ZAVALA V..."
+
+Jack baja la media ps
+19:33:29	 From JORGE JOSUE CHAMORRO CAYETANO : profe, repita los tips ahora estamos todos
+19:33:36	 From MAYERLI DINA LOPEZ CARHUAPUMA : mñn mñn
+19:33:38	 From Pedro Ch?vez : La tercera es la vencida
+19:33:41	 From EISEN JACK MATEO MENDOZA : Malcriado ese kchimbo
+19:33:49	 From Medrano Amaro Gabriel : lee bien el enunciado la fija
+19:33:51	 From JUAN DIEGO ZAVALA VISCARDO : !
+19:33:57	 From Pedro Ch?vez : !
+19:34:08	 From Medrano Amaro Gabriel : !
+19:34:22	 From MAYERLI DINA LOPEZ CARHUAPUMA : !
+19:34:28	 From Nelson Alvarez : !
+19:34:59	 From JUAN DIEGO ZAVALA VISCARDO : Profesor recomienda amanecerse, sacrifiqué todo por algoritmia
+19:35:01	 From EISEN JACK MATEO MENDOZA : !
+19:35:15	 From JORGE JOSUE CHAMORRO CAYETANO : ! ?
+19:35:34	 From DARWIN GERARD CACERES ENDO : que dijo!!!!!!!!!!!!!!
+19:35:35	 From Rony Cueva : $$$$
+19:35:39	 From Rony Cueva : !
+19:35:40	 From MIGUEL ANGEL TORRES VILLANUEVA : xddxxdddx
+19:35:42	 From Rony Cueva : $
+19:35:42	 From JOHN MANUEL ARZAPALO ARANA : XDDDDDDD
+19:35:42	 From KEVIN DANIEL ALCCA CHAVEZ : XD
+19:35:44	 From Rony Cueva : %
+19:35:44	 From ROBERTO ABEL CHAVEZ JAVIER : xd
+19:35:44	 From Medrano Amaro Gabriel : XD
+19:35:45	 From SEBASTIAN STEPHANO GODOY SORIA : XD
+19:35:47	 From Rony Cueva : #
+19:35:49	 From SEBASTIAN STEPHANO GODOY SORIA : XDD
+19:35:51	 From LUIS ALBERTO MIRANDA MALLQUI : Replying to "#"
+
+la fija
+19:35:55	 From MAYERLI DINA LOPEZ CARHUAPUMA : profe si se le escapa su qr también normal
+19:35:55	 From Pedro Ch?vez : @
+19:35:56	 From JUAN DIEGO ZAVALA VISCARDO : XDDD sobrecargar el void
+19:35:56	 From JORGE JOSUE CHAMORRO CAYETANO : sobrecarga # ?
+19:36:00	 From Medrano Amaro Gabriel : &
+19:36:05	 From Pedro Ch?vez : ()
+19:36:16	 From EISEN JACK MATEO MENDOZA : $ % # fija
+19:36:23	 From Pedro Ch?vez : !@#$%^&*()
+19:36:46	 From MAYERLI DINA LOPEZ CARHUAPUMA : 🫏
+19:36:46	 From MIGUEL ANGEL TORRES VILLANUEVA : 🤖
+19:36:57	 From Pedro Ch?vez : Me van a dar pena dice
+19:37:02	 From Medrano Amaro Gabriel : un robot para buscar al repartidor
+19:37:03	 From JORGE JOSUE CHAMORRO CAYETANO : La bendición :D
+19:37:03	 From iPhone de Luis : No profe
+19:37:05	 From iPhone de Luis : Wait
+19:37:05	 From JEYSON DAVID PORTALATINO MUNGUIA : gracias profe
+19:37:08	 From DANIEL ARTURO CASTILLO RIOS : gracias profee
+19:37:19	 From Medrano Amaro Gabriel : gracias profe
+19:37:19	 From EISEN JACK MATEO MENDOZA : No se vaya profe
+19:37:21	 From JORGE JOSUE CHAMORRO CAYETANO : Gracias, profe
+19:37:21	 From EISEN JACK MATEO MENDOZA : Tengo miedo
+19:37:30	 From JORGE JOSUE CHAMORRO CAYETANO : Tengo miedo
+19:37:39	 From JORGE JOSUE CHAMORRO CAYETANO : Este zoom nunca existio
+19:37:46	 From iPhone de Luis : Profe entonces struct con punteros
+19:37:46	 From JUAN DIEGO ZAVALA VISCARDO : Tengo miedo
+19:37:46	 From iPhone de Luis : Xd
+19:37:49	 From EISEN JACK MATEO MENDOZA : Cualquier cosa, guanira dijo
+19:37:49	 From MIGUEL ANGEL TORRES VILLANUEVA : muerte al filtrado
+19:37:57	 From Pedro Ch?vez : zzzz

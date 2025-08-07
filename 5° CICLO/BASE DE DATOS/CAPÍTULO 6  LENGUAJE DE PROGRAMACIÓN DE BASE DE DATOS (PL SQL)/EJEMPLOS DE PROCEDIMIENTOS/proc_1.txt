@@ -1,0 +1,14 @@
+Elaborar un procedimiento que reciba como parámetro el nombre de un distrito y que muestre en pantalla la cantidad de personas que viven en él.
+
+create or replace procedure pr_contar_personas_distrito( p_nom_distrito varchar2 )
+is
+  v_cantidad number;
+begin
+  select count(*) into v_cantidad
+  from PERSONAL P, DISTRITO D
+  where P.discod = D.discod and disnom = p_nom_distrito;
+  dbms_output.put_line( v_cantidad || ' personas viven en ' || p_nom_distrito );
+end;
+
+set SERVEROUTPUT ON
+exec pr_contar_personas_distrito( 'Lince' );

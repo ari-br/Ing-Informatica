@@ -1,0 +1,21 @@
+Elaborar un procedimiento que reciba como parámetros el apellido paterno, apellido materno y nombre de una persona; y que muestre el distrito donde vive. Si la persona no existe o no tiene un cargo asignado se debe mostrar un mensaje apropiado.
+
+create or replace procedure pr_mostrar_distrito_persona
+( p_ape_paterno varchar2, p_ape_materno varchar2, p_nombre varchar2 )
+is
+   v_nom_distrito varchar2(20);
+begin
+   select disnom into v_nom_distrito
+   from PERSONA P, DISTRITO D
+   where P.discod = D.discod and perapp = p_ape_paterno and
+         perapp = p_ape_materno and pernom = p_nombre;
+   dbms_output.put_line( p_nombre || ' ' || p_ape_paterno || ' ' ||
+                         p_ape_materno || ' vive en ' || v_nom_distrito );
+exception
+   when NO_DATA_FOUND then  
+      dbms_output.put_line( 'Persona no existe' );
+end;
+
+
+set SERVEROUTPUT ON
+exec pr_mostrar_distrito_persona( 'RODRIGUEZ', 'VERA', 'FRANCISCA' );

@@ -1,0 +1,53 @@
+
+1. SET TRANSACTION ISOLATION LEVEL READ COMMITTED
+ 
+- Este es el nivel de aislamiento predeterminado en Oracle. Las transacciones solo pueden leer datos que ya han sido confirmados por otras transacciones, evitando el fenómeno de lecturas sucias.
+
+- Si una transacción encuentra datos bloqueados por otra, esperará hasta que se libere el bloqueo o hasta que se agote el tiempo de espera.
+  
+Ejemplo:
+
+SET TRANSACTION ISOLATION LEVEL READ COMMITTED;
+
+SELECT Saldo FROM Cuenta WHERE ID = 1; -- Lee el saldo actual confirmado.
+
+-- Mientras tanto, otra transacción puede modificar el saldo y hacer un COMMIT,
+-- en cuyo caso, si haces otra consulta al mismo registro, obtendrás el valor actualizado.
+
+********************************************************************************************************
+
+2. SET TRANSACTION ISOLATION LEVEL SERIALIZABLE
+
+- Este nivel de aislamiento garantiza que la transacción sea completamente independiente de otras transacciones concurrentes, como si se ejecutaran de forma secuencial. Es el nivel más restrictivo y evita todos los fenómenos de concurrencia.
+
+- Cualquier operación de lectura o escritura bloquea los datos involucrados hasta que se complete la transacción.
+  
+Ejemplo:
+
+SET TRANSACTION ISOLATION LEVEL SERIALIZABLE;
+
+SELECT Saldo FROM Cuenta WHERE ID = 1; -- Bloquea la fila hasta el final de la transacción.
+
+UPDATE Cuenta SET Saldo = Saldo - 100 WHERE ID = 1;
+
+-- Cualquier otra transacción que intente acceder al mismo registro será bloqueada hasta que
+-- esta transacción termine con COMMIT o ROLLBACK.
+
+********************************************************************************************************
+
+3. SET TRANSACTION ISOLATION LEVEL READ ONLY
+
+- Este nivel de aislamiento convierte la transacción en una transacción de solo lectura. Las consultas se ejecutan con consistencia de lectura sin permitir actualizaciones o modificaciones a los datos.
+
+- No se pueden ejecutar operaciones de escritura (INSERT, UPDATE, DELETE).
+
+- Las lecturas son consistentes respecto al momento en que comenzó la transacción.
+
+Ejemplo:
+
+SET TRANSACTION ISOLATION LEVEL READ ONLY;
+
+SELECT COUNT(*) FROM Ventas WHERE Fecha >= SYSDATE - 30;
+
+-- Esta consulta será consistente y no se verá afectada por transacciones concurrentes.
+-- Intentar modificar datos resultará en un error.

@@ -1,0 +1,72 @@
+create table PERSONA
+( id number primary key,
+  nombre varchar2(20),
+  apellido varchar2(20),
+  fec_nac date,
+  sexo char );
+
+
+
+version 1 ( sin usar %type ni %rowtype )
+****************************************
+
+create or replace procedure PR_MOSTRAR( p_id number )
+is
+   v_nom varchar2(20);
+   v_ape varchar2(20);   
+   v_fnac date;
+   v_sexo char;
+begin
+   select nombre, apellido, fec_nac, sexo
+   into v_nom, v_ape, v_fnac, v_sexo
+   from PERSONA
+   where id = p_id;
+   dbms_output.put_line('Nombre: ' || v_nom);
+   dbms_output.put_line('Apellido: ' || v_ape);
+   dbms_output.put_line('Fecha Nacimiento: ' || v_fnac);
+   dbms_output.put_line('Sexo: ' || v_sexo);
+end;
+
+
+
+version 2 ( usando %type )
+**************************
+
+create or replace procedure PR_MOSTRAR( p_id number )
+is
+   v_nom PERSONA.nombre%type;
+   v_ape PERSONA.apellido%type;   
+   v_fnac PERSONA.fec_nac%type;
+   v_sexo PERSONA.sexo%type;
+begin
+   select nombre, apellido, fec_nac, sexo
+   into v_nom, v_ape, v_fnac, v_sexo
+   from PERSONA
+   where id = p_id;
+   dbms_output.put_line('Nombre: ' || v_nom);
+   dbms_output.put_line('Apellido: ' || v_ape);
+   dbms_output.put_line('Fecha Nacimiento: ' || v_fnac);
+   dbms_output.put_line('Sexo: ' || v_sexo);
+end;
+
+
+
+version 3 ( usando %rowtype )
+*****************************
+
+create or replace procedure PR_MOSTRAR( p_id number )
+is
+   v_reg PERSONA%rowtype;
+begin
+   select *
+   into v_reg
+   from PERSONA
+   where id = p_id;
+   dbms_output.put_line('Nombre: ' || v_reg.nombre);
+   dbms_output.put_line('Apellido: ' || v_reg.apellido);
+   dbms_output.put_line('Fecha Nacimiento: ' || v_reg.fec_nac);
+   dbms_output.put_line('Sexo: ' || v_reg.sexo);
+end;
+
+
+

@@ -1,0 +1,147 @@
+--PREGUNTA 3.a------------------------------------------------------------------
+SET SERVEROUTPUT ON;
+
+CREATE OR REPLACE PROCEDURE pr_resultados_elecciones
+IS
+    CURSOR c_partido
+    IS
+    SELECT *
+    FROM PARTIDO_POLITICO
+    ORDER BY NOMBRE;
+    
+    v_reg_partido c_partido%ROWTYPE;
+    --Para almacenar la cantidad de votos
+    v_votos_part NUMBER :=0;
+    v_votos_nulo NUMBER :=0;
+    v_votos_blanco NUMBER :=0;
+    --Para almacenar los datos del partido ganador (nombre, votos)
+    v_partido_ganador PARTIDO_POLITICO.NOMBRE%TYPE;
+    v_max_votos NUMBER :=0;
+BEGIN
+    dbms_output.put_line('Resultados de las Elecciones');
+    dbms_output.put_line(' ');
+    
+    OPEN c_partido;
+    LOOP
+        FETCH c_partido INTO v_reg_partido;
+        EXIT WHEN c_partido%NOTFOUND;
+        
+        SELECT SUM(VOTOS) INTO v_votos_part
+        FROM VOTACION
+        WHERE IDPARTIDO=v_reg_partido.IDPARTIDO;
+        
+        IF(v_reg_partido.nombre<>'BLANCO' and v_reg_partido.nombre<>'NULO')THEN
+            
+            dbms_output.put_line('Partido ' || v_reg_partido.nombre || ': '
+            || v_votos_part || ' votos');
+            
+            --Si los votos del partido actual son mayores que el máximo de votos
+            --almacenado, se actualizan los datos del partido ganador
+            IF(v_votos_part>v_max_votos)THEN
+                v_max_votos:=v_votos_part;
+                v_partido_ganador:=v_reg_partido.nombre;
+            END IF;
+            
+        ELSE
+            --Los votos del partido BLANCO son votos en blanco
+            IF(v_reg_partido.nombre='BLANCO')THEN
+                v_votos_blanco:=v_votos_part; 
+            END IF;
+            --Los votos del partido NULO son votos nulos
+            IF(v_reg_partido.nombre='NULO')THEN
+                v_votos_nulo:=v_votos_part;
+            END IF;
+        END IF;
+        
+    END LOOP;
+    CLOSE c_partido;
+    
+    dbms_output.put_line('Votos nulos: ' || v_votos_nulo || ' votos');
+    dbms_output.put_line('Votos en blanco: ' || v_votos_blanco || ' votos');
+    dbms_output.put_line(' ');
+    
+    --Si el máximo de votos almacenado, es mayor que la suma de los votos nulos
+    --y en blanco, entonces sí hay un partido ganador
+    IF(v_max_votos>(v_votos_nulo+v_votos_blanco))THEN
+        dbms_output.put_line('Partido ganador: ' || v_partido_ganador);
+    ELSE
+        dbms_output.put_line('no ganó ningún partido');
+    END IF;
+    
+END;
+      
+
+BEGIN
+    pr_resultados_elecciones;
+END;
+
+
+
+--PREGUNTA 3.b------------------------------------------------------------------
+CREATE OR REPLACE PROCEDURE pr_almacenar_votos_partido
+(p_nom_partido VARCHAR2)
+IS
+    CURSOR c_region
+    IS
+    SELECT *
+    FROM REGION_PERU
+    ORDER BY NOMBRE;
+    
+    v_reg_region c_region%ROWTYPE;
+    v_id_partido PARTIDO_POLITICO.IDPARTIDO%TYPE;
+    v_cant NUMBER :=0;
+    v_filas NUMBER :=0;
+    PARTIDO_INVALIDO exception;
+    v_votos_part NUMBER :=0;
+BEGIN
+    --Cuenta cuantos partidos tienen el nombre ingresado, para saber si existe
+    SELECT count(IDPARTIDO) INTO v_cant
+    FROM PARTIDO_POLITICO
+    WHERE NOMBRE=p_nom_partido
+    GROUP BY IDPARTIDO;
+    
+    IF v_cant = 0 THEN
+        raise PARTIDO_INVALIDO; --Si no eiste ese partido
+    ELSE
+        --Obtiene el id del partido
+        SELECT IDPARTIDO INTO v_id_partido
+        FROM PARTIDO_POLITICO
+        WHERE NOMBRE=p_nom_partido;
+        
+        --Cuenta cuantas filas tiene la tabla VOTOS_PARTIDO
+        SELECT count(NOMBRE_REGION) INTO v_filas
+        FROM VOTOS_PARTIDO;
+        --Si tiene filas, elimina los datos de la tabla
+        IF(v_filas>0)THEN
+            DELETE FROM VOTOS_PARTIDO;
+        END IF;
+        
+        OPEN c_region;
+        LOOP
+            FETCH c_region INTO v_reg_region;
+            EXIT WHEN c_region%NOTFOUND;
+            
+            --Suma los votos del partido en cada región
+            SELECT SUM(VOTOS) INTO v_votos_part
+            FROM VOTACION
+            WHERE IDPARTIDO=v_id_partido AND IDREGION=v_reg_region.IDREGION;
+            
+            INSERT INTO VOTOS_PARTIDO VALUES (v_reg_region.NOMBRE,v_votos_part);
+            
+        END LOOP;
+        CLOSE c_region;
+        
+        dbms_output.put_line('Se ha creado una tabla con los votos del partido '
+        || p_nom_partido || ' en todas las regiones');
+        
+    END IF;
+        
+EXCEPTION
+    WHEN PARTIDO_INVALIDO THEN
+        dbms_output.put_line('El partido ingresado no eiste, es inválido');
+END;
+
+exec pr_almacenar_votos_partido( 'XYZ' );
+
+SELECT *
+FROM VOTOS_PARTIDO;

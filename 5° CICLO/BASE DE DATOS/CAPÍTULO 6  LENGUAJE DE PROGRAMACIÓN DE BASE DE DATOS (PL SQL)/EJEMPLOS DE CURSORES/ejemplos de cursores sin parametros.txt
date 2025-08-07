@@ -1,0 +1,46 @@
+
+CURSORES
+********
+
+CURSOR SIN PARAMETROS
+*********************
+
+version 1 ( usando open-loop-close )
+************************************
+
+create or replace procedure PR_MOSTRAR_VARONES
+is
+   CURSOR C1 is select * from PERSONA where sexo = 'M';
+   v_reg C1%rowtype;
+   v_cant number;
+begin
+   v_cant := 0;
+   open C1; 
+   loop
+      fetch C1 into v_reg;
+      EXIT WHEN C1%NOTFOUND;
+      dbms_output.put_line(v_reg.nombre || ' ' || v_reg.apellido || ' ' || v_reg.fec_nac );
+      v_cant := v_cant + 1;
+   end loop;
+   close C1;
+   dbms_output.put_line('Total varones: ' || v_cant );
+end;
+
+
+version 2 ( usando for loop )
+*****************************
+
+create or replace procedure PR_MOSTRAR_VARONES
+is
+   CURSOR C1 is select * from PERSONA where sexo = 'M';
+   v_cant number;
+begin
+   v_cant := 0;
+   FOR v_reg in C1 LOOP
+      dbms_output.put_line(v_reg.nombre || ' ' || v_reg.apellido || ' ' || v_reg.fec_nac );
+      v_cant := v_cant + 1;
+   END LOOP;
+   dbms_output.put_line('Total varones: ' || v_cant );
+end;
+
+

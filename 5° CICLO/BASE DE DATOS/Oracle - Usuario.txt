@@ -1,0 +1,8 @@
+Su usuario personal : A20226705
+Su contraseña :  x602jq9w
+Database:       DBINF
+
+Nombre del host : dbinf.inf.pucp.edu.pe
+Puerto: 1521
+SID: DBINF
+Servicio: dbinf.inf.pucp.edu.pe

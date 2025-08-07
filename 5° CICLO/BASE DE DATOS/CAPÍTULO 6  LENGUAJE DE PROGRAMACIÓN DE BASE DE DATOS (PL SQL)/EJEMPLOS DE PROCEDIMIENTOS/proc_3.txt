@@ -1,0 +1,19 @@
+Elaborar un procedimiento que reciba como parámetros el nombre de un distrito y un monto de dinero. En base a ello se debe incrementar en ese monto el sueldo a todas las personas que viven en ese distrito.
+
+create or replace procedure pr_incrementar_sueldo
+                          ( p_nom_distrito varchar2, p_monto number )
+is
+   v_cod_distrito number;
+begin
+   select discod into v_cod_distrito
+   from DISTRITO where disnom = p_nom_distrito;
+
+   update PERSONA
+   set sueldo = sueldo + p_monto
+   where discod = v_cod_distrito;
+exception
+   when NO_DATA_FOUND then
+     dbms_output.put_line( 'Distrito ' || p_nom_distrito || ' no existe' );
+end;
+
+exec pr_incrementar_sueldo( 'Pueblo Libre' , 200 );

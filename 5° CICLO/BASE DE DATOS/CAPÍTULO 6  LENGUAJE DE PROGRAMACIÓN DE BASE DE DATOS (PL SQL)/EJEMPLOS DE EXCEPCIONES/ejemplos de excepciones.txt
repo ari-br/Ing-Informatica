@@ -1,0 +1,70 @@
+EXCEPCIONES
+***********
+
+ejemplo de la excepcion NO_DATA_FOUND
+**************************************
+
+create o replace procedure mostrar_nombre_apepat( p_idper number )
+is
+   v_nombre PERSONA.nombre%type;
+   v_apepat PERSONA.apepat%type;
+begin
+   select nombre, apepat into v_nombre, v_apepat
+   from PERSONA
+   where p_idper = idper;
+   dbms_output.put_line(v_nombre || ' ' || v_apepat );
+exception
+   when NO_DATA_FOUND then
+      dbms_output.put_line('no existe persona con codigo ' || p_idper );
+end;
+
+
+ejemplo de la excepción TOO_MAY_ROWS
+************************************
+
+create o replace procedure mostrar_apepat( p_nombre varchar2 )
+is
+   v_apepat PERSONA.apepat%type;
+begin
+   select apepat into v_apepat
+   from PERSONA
+   where nombre = p_nombre;
+   dbms_output.put_line('el apellido de ' || p_nombre || ' es ' || v_apepat );
+exception
+   when TOO_MANY_ROWS then
+      dbms_output.put_line( 'existen varias personas con nombre ' || p_nombre );
+end;
+
+
+
+ejemplo de una excepción definida por el programador
+****************************************************
+
+
+Tabla:    CLIENTE( idcli, nombre, apellido, saldo )
+
+
+create or replace pr_retirar_dinero( p_idcli number, p_monto number )
+is
+   v_saldo_actual number;
+   SALDO_INSUFICIENTE exception;
+begin
+   select saldo into v_saldo_actual
+   from CLIENTE
+   where idcli = p_idcli;
+   if v_saldo_actual >= p_monto then
+       update CLIENTE
+       set saldo = saldo - p_monto
+       where idcli = p_idcli;
+       dbms_output.put_line( 'retiro exitoso, el saldo ha sido actualizado' );
+   else
+       raise SALDO_INSUFICIENTE;
+   end if;
+   
+exception
+   when NO_DATA_FOUND then
+       dbms_output.put_line( 'cliente no existe' );
+   when SALDO_INSUFICIENTE then
+       dbms_output.put_line( 'no es posible el retiro por saldo insuficiente' );
+end; 
+

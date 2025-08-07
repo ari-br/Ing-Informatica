@@ -1,0 +1,22 @@
+
+
+create or replace procedure pr_aumentar( n IN OUT number, x IN number )
+is
+   aux number;
+begin
+   aux := n;
+   aux := aux + x;
+   n:= aux;
+end;
+
+
+declare
+   v_num number;
+   v_aumento number;
+begin
+   v_num := 20;
+   v_aumento := 5;
+   pr_aumentar( v_num, v_aumento );
+   dbms_output.put_line( 'el nuevo valor de v_num es ', v_num );
+ 
+end;

@@ -1,0 +1,47 @@
+Elaborar una función que reciba como parámetro una fecha y que devuelva dicha fecha en forma de frase. Por ejemplo, si la fecha que recibe la función es ‘25/10/2024’, está devolverá la frase ‘25 de octubre de 2024’.
+
+create or replace function f_fecha_frase( p_fecha date )
+return varchar2
+is
+   v_d number;
+   v_m number;
+   v_a number;
+   v_dia varchar2(2);
+   v_mes varchar2(20);
+   v_año varchar2(4);
+   v_frase varchar2(30);
+begin
+   v_d := extract( day from p_fecha );
+   v_m := extract( month from p_fecha );
+   v_a := extract( year from p_fecha );
+   case v_m
+      when 1 then v_mes := 'enero';
+      when 2 then v_mes := 'febrero';
+      when 3 then v_mes := 'marzo';
+      when 4 then v_mes := 'abril';
+      when 5 then v_mes := 'mayo';
+      when 6 then v_mes := 'junio';
+      when 7 then v_mes := 'julio';
+      when 8 then v_mes := 'agosto';
+      when 9 then v_mes := 'setiembre';
+      when 10 then v_mes := 'octubre';
+      when 11 then v_mes := 'noviembre';
+      else v_mes := 'diciembre';
+   end case;
+   v_dia := to_char( v_d );
+   v_año := to_char( v_a );
+   v_frase := v_dia || ' de ' || v_mes || ' de ' || v_año;
+   return v_frase;
+end;
+
+
+set SERVEROUTPUT ON
+
+declare
+   v_fecha date;
+   v_frase varchar2(30);
+begin
+   v_fecha := to_date( '25-10-2024', 'DD-MM-YYYY' );
+   v_frase := f_fecha_frase( v_fecha );
+   dbms_output.put_line( v_frase );
+end;

@@ -1,0 +1,33 @@
+Elaborar una función que reciba como parámetro una fecha de nacimiento y 
+que devuelva la edad correspondiente.
+
+create or replace function f_obtener_edad( p_fecha_nacimiento date )
+return number
+is
+   v_meses number;
+   v_edad number;
+begin
+   v_meses := months_between( sysdate, p_fecha_nacimiento );
+   v_edad := trunc( v_meses / 12 );
+   return v_edad;
+end;
+
+
+set SERVEROUTPUT ON
+
+declare
+   v_fecha date;
+   v_edad number;
+begin
+   v_fecha := to_date( '24-08-2014', 'DD-MM-YYYY' );
+   v_edad := f_obtener_edad( v_fecha );
+   dbms_output.put_line( 'La edad es ', v_edad );
+end;
+
+
+********************************************************************************
+
+select apellido_paterno || ' ' || apellido_materno || ' ' || nombres as Nombre,
+       f_fecha_frase( fecha_nacimiento) as Fecha_Nacimiento,
+       f_obtener_edad( fecha_nacimiento ) as Edad
+from PERSONA;

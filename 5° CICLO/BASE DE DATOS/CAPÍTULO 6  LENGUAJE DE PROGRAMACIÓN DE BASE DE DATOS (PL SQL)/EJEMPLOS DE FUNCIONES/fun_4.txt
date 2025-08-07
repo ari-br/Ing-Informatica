@@ -1,0 +1,31 @@
+Elaborar una función que reciba como parámetros un nombre de distrito y una
+profesión y que devuelva la cantidad de personas que tienen esa profesion que 
+viven en ese distrito.
+
+create or replace function f_contar_profesion_distrito( p_nom_profesion varchar2,
+                                                        p_nom_distrito varchar2 )
+return number
+as
+   v_cantidad number;
+begin
+   select count(*)
+   into v_cantidad
+   from PERSONA P, PERSONAPROFESION PP, PROFESION R, DISTRITO D
+   where P.percod = PP.percod and PP.procod = R.procod and P.discod = D.discod
+         and pronom = p_nom_profesion and disnom = p_nom_distrito;
+   return v_cantidad;
+end;
+
+
+set SERVEROUTPUT ON
+
+declare
+   v_cantidad number;
+   v_nom_profesion varchar2(20);
+   v_nom_distrito varchar2(20);
+begin
+   v_nom_profesion := 'Contador';
+   v_nom_distrito := 'Lince';
+   v_cantidad := f_contar_profesion_distrito( v_nom_profesion, v_nom_distrito );
+   dbms_output.put_line( v_cantidad );
+end;

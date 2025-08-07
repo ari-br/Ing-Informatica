@@ -1,0 +1,239 @@
+RAISE_APPLICATION_ERROR es una función en PL/SQL que permite a los desarrolladores generar mensajes de error 
+personalizados desde un bloque PL/SQL (como procedimientos, funciones o triggers). Es muy útil para controlar 
+el flujo del programa y notificar al usuario o a la aplicación sobre condiciones específicas de error.
+
+RAISE_APPLICATION_ERROR(error_number, error_message);
+
+error_number:
+
+- Es un número entero entre -20000 y -20999.
+
+- Este rango está reservado para errores definidos por el usuario.
+
+- El número ayuda a identificar el error en particular.
+
+
+error_message:
+
+Es una cadena de texto que describe el error.
+
+Puede tener una longitud máxima de 2048 caracteres.
+
+
+*********************************************************************************
+
+TRIGGERS
+
+CREATE [OR REPLACE] TRIGGER trigger_name
+
+{BEFORE | AFTER | INSTEAD OF} 
+{INSERT | UPDATE [OF column_list] | DELETE} 
+ON table_name
+
+[FOR EACH ROW]
+
+[WHEN (condition)]
+
+DECLARE
+    -- Declaración de variables y constantes (opcional)
+
+
+BEGIN
+    -- Bloque de código PL/SQL
+
+
+EXCEPTION
+    -- Manejo de excepciones (opcional)
+
+
+
+END;
+
+***************************************************************************************
+
+
+EMPLEADO( idemp, apepat, apemat, nombre, sexo, iddpto, idjefe, salario )
+
+AUDITORIA_SALARIOS ( usuario, fecha, detalle )
+
+Crear un trigger que permita registrar en la tabla AUDIORIA_SALARIOS cuando se realicen incrementos 
+de sueldo a los empleados
+
+Version 1:  a nivel de fila
+***************************
+
+CREATE OR REPLACE TRIGGER tr_aumento_salarios_v1
+AFTER UPDATE OF SALARIO ON EMPLEADO
+FOR EACH ROW
+BEGIN
+  insert into AUDITORIA_SALARIOS values ( user, sysdate, 'se aumento el salario al               
+                empleado' || :new.idemp );
+  END IF;
+END;
+
+
+Version 2:  a nivel de sentencia
+********************************
+
+
+CREATE OR REPLACE TRIGGER tr_aumento_salarios_v2
+AFTER UPDATE OF SALARIO ON EMPLEADO
+BEGIN
+  insert into AUDITORIA_SALARIOS values ( user, sysdate, 'se aumento el salario a varios empleados')
+  END IF;
+END;
+
+*************************************************************************************************
+
+Crear un trigger sobre la tabla EMPLEADO para que no se permita que un empleado sea jefe de más de cinco empleados.
+
+CREATE OR REPLACE TRIGGER tr_jefes
+BEFORE INSERT ON EMPLEADO
+FOR EACH ROW
+DECLARE
+  v_cantidad INTEGER;
+BEGIN
+  SELECT count(*) INTO v_cantidad
+  FROM EMPLEADO WHERE idjefe = :new.idjefe;
+  IF ( v_cantidad = 5 ) THEN 
+      raise_application_error(-20600, :new.idjefe || 'no puede supervisar más de 5 empleados');
+  END IF;
+END;
+
+insert into EMPLEADO
+( idemp, apepat, apemat, nombre, sexo, iddpto, idjefe, salario )
+values ( 129, 'Flores', 'Diaz', 'Juan', 'M', 3, 30, 2500 )            
+
+**************************************************************************************************
+
+Crear un trigger para impedir que se aumente el salario de un empleado en más de un 20%.
+
+CREATE OR REPLACE TRIGGER tr_aumento_salario
+BEFORE UPDATE OF salario ON EMPLEADO
+FOR EACH ROW
+BEGIN
+   IF :NEW.salario > :OLD.salario*1.20 THEN 
+      raise_application_error(-20601,'no se puede aumentar el salario más de un 20%');
+   END IF;
+END;
+
+***************************************************************************************************
+
+Crear un trigger para impedir que el sueldo de una mujer que se inserta en la tabla
+sea menor de 2000 soles
+
+CREATE OR REPLACE TRIGGER tr_aumentoSalario
+BEFORE INSERT ON EMPLEADO
+FOR EACH ROW
+WHEN (new.sexo = 'F')
+BEGIN
+   IF :new.salario < 2000 THEN 
+      raise_application_error(-20602,'el sueldo de una mujer no puede ser menor a 2000 soles');
+   END IF;
+END;
+
+Si no se usan when, se tendría la siguiente versión equivalente:
+
+CREATE OR REPLACE TRIGGER tr_aumentoSalario
+BEFORE INSERT ON EMPLEADO
+FOR EACH ROW
+BEGIN
+   IF :new.sexo = 'F' and :new.salario < 2000 THEN 
+      raise_application_error(-20602,'el sueldo de una mujer no puede ser menor a 2000 soles');
+   END IF;
+END;
+
+**************************************************************************************************
+
+EMPLEADO_BAJA( idemp, apepat, apemat, nombre, sexo, iddpto, idjefe, salario, usuario, fecha )
+
+Crear un trigger que inserte una fila en la tabla EMPLEADO_BAJA cuando se borre una fila en la tabla EMPLEADO.
+
+CREATE OR REPLACE TRIGGER tr_bajas
+AFTER DELETE ON EMPLEADO
+FOR EACH ROW
+BEGIN
+  INSERT INTO EMPLEADO_BAJA 
+  VALUES ( :old.idemp, :old.apepat, :old.apemat, :old.nombre, :old.sexo, :old.iddpto,                         
+END;
+
+**************************************************************************************************
+
+Crear un trigger para impedir que, al insertar un empleado, el empleado y su jefe 
+puedan pertenecer a departamentos distintos.
+
+CREATE OR REPLACE TRIGGER TR_MISMO_DEP
+BEFORE INSERT ON EMPLEADO
+FOR EACH ROW
+DECLARE
+  v_iddpto_jefe INTEGER;
+BEGIN
+     SELECT iddpto INTO v_iddpto_jefe FROM EMPLEADO
+     WHERE idempleado = :NEW.idjefe;
+     IF ( v_iddpto_jefe <> :NEW.iddpto ) THEN
+        raise_application_error(-20603,'Un empleado y su jefe no pueden pertenecer a departamentos diferentes');
+     END IF;
+END;
+
+*************************************************************************************************
+
+Crear un trigger para impedir que, al insertar un empleado, la suma de los 
+salarios de los empleados pertenecientes al departamento del empleado insertado
+supere los 10000 soles.
+
+CREATE OR REPLACE TRIGGER tr_suma_salarios
+BEFORE INSERT ON EMPLEADO
+FOR EACH ROW
+DECLARE
+   v_suma INTEGER;
+BEGIN
+   SELECT SUM(salario) INTO v_suma FROM EMPLEADO
+   WHERE iddpto = :NEW.iddpto;
+   v_suma := v_suma + :NEW.salario;
+   IF (v_suma > 10000) THEN
+      raise_application_error(-20604,'La suma de salarios no puede ser superior a 10000');
+   END IF;
+END;
+
+*************************************************************************************************
+
+Crear un trigger que:
+- en caso se quiera modificar el id el empleado no lo permita
+- en caso se quiera modificar el salario, solo lo permita si está entre 2000 y 5000 
+
+CREATE OR REPLACE TRIGGER tr_actualizar
+BEFORE UPDATE ON EMPLEADO
+FOR EACH ROW
+BEGIN
+  IF updating ('idemp') THEN
+     raise_application_error(-20000,'No puede modificar el codigo');     
+  END IF;
+  IF updating ('salario') then
+     IF (:new.salario < 2000) or (:new.salario > 5000) THEN
+        raise_application_error(-20002,'El valor de salario debe estar entre 2000 y 5000');     
+     END IF;
+  END IF;
+END;
+
+************************************************************************************************
+
+Crear un trigger que se dispare cada vez que se realice una inserción, una actualización
+o una eliminación en la tabla EMPLEADO. El trigger debe almacenar en una tabla llamada
+AUDITORIA (cuyas columnas son usuario, fecha y accion ) el usuario que realizó la 
+operación, la fecha en que se realizó y el tipo de acción ( "I" : insert, "U" = update
+"D" = delete )
+
+CREATE OR REPLACE TRIGGER tr_auditoria
+AFTER INSERT, UPDATE OR DELETE ON EMPLEADO
+BEGIN
+  IF inserting THEN
+     insert into AUDITORIA values ( user, sysdate, "I" );     
+  END IF;
+  IF updating THEN
+     insert into AUDITORIA values ( user, sysdate, "U" );     
+  END IF;
+  IF deleting THEN
+     insert into AUDITORIA values ( user, sysdate, "D" );     
+  END IF;
+END;
+

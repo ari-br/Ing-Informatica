@@ -1,0 +1,53 @@
+
+CURSOR CON PARAMETROS
+*********************
+
+versión 1 ( usando open-loop-close)
+***********************************
+
+create or replace procedure PR_MOSTRAR_PERSONAS
+is
+    CURSOR C( p_fini date, p_ffin date )
+    is
+    select * from PERSONA
+    where fec_nac between p_fini and p_ffin;
+    
+    v_reg C%rowtype;
+    v_f1 date;
+    v_f2 date;
+begin
+    v_f1 := to_date( '12/10/2001','DD/MM/YYYY' );
+    v_f2 := to_date( '25/12/2004','DD/MM/YYYY' );
+    
+    open C( v_f1, v_f2 );
+    loop
+      fetch C into v_reg;
+      EXIT WHEN C%NOTFOUND;
+      dbms_output.put_line(v_reg.nombre || ' ' || v_reg.apellido || ' ' || v_reg.fec_nac );
+    end loop;
+    close C;
+end;
+
+
+versión 2 ( usando for loop )
+*****************************
+
+create or replace procedure PR_MOSTRAR_PERSONAS
+is
+    CURSOR C( p_fini date, p_ffin date )
+    is
+    select * from PERSONA
+    where fec_nac between p_fini and p_ffin;
+    
+    v_f1 date;
+    v_f2 date;
+begin
+    v_f1 := to_date( '12/10/2001','DD/MM/YYYY' );
+    v_f2 := to_date( '25/12/2004','DD/MM/YYYY' );
+    
+    FOR v_reg in C(v_f1,v_f2) LOOP
+       dbms_output.put_line(v_reg.nombre || ' ' || v_reg.apellido || ' ' || v_reg.fec_nac );
+    END LOOP;
+end;
+
+

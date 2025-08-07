@@ -1,0 +1,36 @@
+Elaborar un procedimiento que permita obtener el sueldo máximo, mínimo y promedio de las pesonas
+de un determinado sexo
+
+create or replace procedure pr_obtener_sueldos( p_sexo IN char, 
+                                                p_sueldo_max OUT number,
+                                                p_sueldo_min OUT number,
+                                                p_sueldo_prom OUT number )
+is
+   v_sue_max number;
+   v_sue_min number;
+   v_sue_prom number;
+begin
+   select max(persue), min(persue), avg(persue)
+   into v_sue_max, v_sue_min, v_sue_prom
+   from PERSONA
+   where persex = p_sexo;
+   p_sueldo_max := v_sue_max;
+   p_sueldo_min := v_sue_min;
+   p_sueldo_prom := v_sue_prom;
+end; 
+
+*************************************************************************************
+
+declare
+   v_sueldo_max number;
+   v_sueldo_min number;
+   v_sueldo_prom number;
+   v_sexo char;
+begin
+   v_sexo : = 'M';
+   pr_obtener_sueldos( v_sexo, v_sueldo_max, v_sueldo_min, v_sueldo_prom );
+   dbms_output.put_line( 'sueldo maximo: ' || v_sueldo_max );
+   dbms_output.put_line( 'sueldo minimo: ' || v_sueldo_min );
+   dbms_output.put_line( 'sueldo promedio: ' || v_sueldo_prom );
+end;
+

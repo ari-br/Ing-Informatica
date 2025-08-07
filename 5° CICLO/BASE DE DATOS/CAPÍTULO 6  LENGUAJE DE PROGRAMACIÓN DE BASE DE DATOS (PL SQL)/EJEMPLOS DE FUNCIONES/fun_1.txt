@@ -1,0 +1,35 @@
+Elaborar una función que reciba como parámetro un sexo ( valores ‘F’ o ‘M’ ) 
+y que devuelva la cantidad de personas que tienen dicho sexo. Si el valor del 
+parámetro no es correcto la función deberá retornar -1.
+
+create or replace function f_contar_personas_por_sexo( p_sexo char )
+return number
+as
+   v_cantidad number;
+begin
+   if p_sexo <> 'M' and p_sexo <> 'F' then
+      v_cantidad := -1;
+   else
+      select count(*)
+      into v_cantidad
+      from PERSONA
+      where sexo = p_sexo;
+   end if;
+   return v_cantidad;
+end;
+
+
+set SERVEROUTPUT ON
+
+declare
+   v_cantidad number;
+   v_sexo char;
+begin
+   v_sexo := 'F';
+   v_cantidad := f_contar_personas_por_sexo( v_sexo );
+   if v_cantidad <> -1 then
+      dbms_output.put_line( 'Hay ' || v_cantidad || ' personas de sexo ' || v_sexo );
+   else
+      dbms_output.put_line( 'Sexo no válido' );
+   end if;
+end;

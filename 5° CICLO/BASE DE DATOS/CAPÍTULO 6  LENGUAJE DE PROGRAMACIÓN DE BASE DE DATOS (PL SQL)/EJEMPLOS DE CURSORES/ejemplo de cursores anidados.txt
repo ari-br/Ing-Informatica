@@ -1,0 +1,101 @@
+CURSORES ANIDADOS
+*****************
+
+Tablas:
+
+DISTRITO( iddis, nombre )
+PERSONA ( idper, nombre, apepat, apemat, iddis )
+
+********************************************************
+
+Se quiere generar un reporte como el siguiente:
+
+
+Miraflores
+- Juan Perez Torres
+- Rosa Soto Vela
+
+Surco
+- Miguel Sanchez Lopez
+- Roxana Salazar Diaz
+- Roberto Rojas Alva
+
+Ate
+- Jorge Galvan Cuba
+- Zoila Farfan Vargas
+
+********************************************************
+
+
+versión 1 ( uando open-loop-close )
+***********************************
+
+
+create or replace pr_listar_personas
+is
+   cursor c_dis 
+   is 
+   select * from DISTRITO
+   order by nombre;
+
+   cursor c_per( p_iddis number )
+   is
+   select * from PERSONA
+   where iddis = p_iddis;
+
+   v_regdis c_dis%rowtype;
+   v_regper c_per%rowtype;
+
+begin
+   
+   open c_dis;
+   loop
+      fetch c_dis into v_regdis;
+      EXIT WHEN c_dis%NOTFOUND;
+      dbms_output.put_line(v_regdis.nombre); 
+     
+      open c_per( v_regdis.iddis );
+      loop
+         fetch c_per into v_regper
+         EXIT WHEN c_per%NOTFOUND;
+         dbms_output.put_line('- ' || v_regper.nombre || ' ' || v_regper.apepat || ' ' || v_regper.apemat );  
+      end loop;
+      close c_per;
+   end loop;
+   close c_dis;
+end;
+
+
+
+versión 2 ( usando for loop )
+*****************************
+
+create or replace pr_listar_personas
+is
+   cursor c_dis 
+   is 
+   select * from DISTRITO
+   order by nombre;
+
+   cursor c_per( p_iddis number )
+   is
+   select * from PERSONA
+   where id_dis = p_iddis;
+
+begin
+   
+   for v_regdis in c_dis loop
+
+      dbms_output.put_line(v_regdis.nombre); 
+     
+      for v_regper in c_per(v_regdis.iddis) loop
+         
+         dbms_output.put_line('- ' || v_regper.nombre || ' ' || v_regper.apepat || ' ' || v_regper.apemat );  
+      
+      end loop;
+ 
+   end loop;
+   
+end;
+
+
