@@ -1,4 +1,0 @@
-drop table VOTACION;
-drop table PARTIDO_POLITICO;
-drop table REGION_PERU;
-drop table VOTOS_PARTIDO;
