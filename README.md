@@ -1,7 +1,7 @@
 # Repositorio de Material Académico – Ingeniería Informática
 
 Bienvenid@ al repositorio colaborativo de material académico de Ingeniería Informática.  
-Este espacio está pensado para **compartir material de clase, apuntes, exámenes, prácticas, laboratorios y otros recursos útiles** de los cursos comprendidos entre el 5° y 10° ciclo de la carrera.
+Este espacio está pensado para **compartir material de clase, apuntes, exámenes, prácticas, laboratorios y otros recursos útiles** de los cursos comprendidos entre el 5° y 10° ciclo de la carrera, y otros como Técnicas de Programación de 4° ciclo.
 
 Todo el contenido es aportado por estudiantes, para estudiantes.  
 ¡Gracias por contribuir y hacer crecer este recurso!
@@ -35,13 +35,6 @@ Todo el contenido es aportado por estudiantes, para estudiantes.
 1. Puedes subir material directamente usando el formulario.
 2. No subas información personal.
 3. El material será revisado brevemente antes de ser organizado en este repositorio.
-
----
-
-## 🛡️ Licencia
-
-Todo el contenido compartido aquí se distribuye con fines educativos y de acceso libre.  
-Si deseas que algo sea retirado, por favor contáctanos.
 
 ---
 
